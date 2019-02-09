@@ -251,12 +251,17 @@ CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/detail/type_vec4.inl
 CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/detail/type_vec4_avx.inl
 CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/detail/type_vec4_avx2.inl
 CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/detail/type_vec4_sse2.inl
+CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/exponential.hpp
 CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/fwd.hpp
 CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/geometric.hpp
 CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/gtc/constants.hpp
 CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/gtc/constants.inl
 CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/gtc/matrix_transform.hpp
 CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/gtc/matrix_transform.inl
+CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/gtc/quaternion.hpp
+CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/gtc/quaternion.inl
+CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/gtc/type_ptr.hpp
+CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/gtc/type_ptr.inl
 CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/mat2x2.hpp
 CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/mat2x3.hpp
 CMakeFiles/COMP_371_A2.dir/main.cpp.obj: ../GLM/glm/mat2x4.hpp

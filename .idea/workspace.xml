@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="COMP_371_A1" targetName="COMP_371_A1" />
+      <config projectName="COMP_371_A2" targetName="COMP_371_A2" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,7 +11,23 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa210c78-ec2f-4fca-9937-978a4ea5baa1" name="Default Changelist" comment="" />
+    <list default="true" id="aa210c78-ec2f-4fca-9937-978a4ea5baa1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Shaders/PhongFragmentShader.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/PhongVertexShader.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controls/KeyboardControls.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controls/KeyboardControls.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controls/KeyboardControls.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controls/KeyboardControls.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shaders/BasicFragmentShader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shaders/BasicVertexShader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/Controls/KeyboardControls.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/Controls/KeyboardControls.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/COMP_371_A2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/COMP_371_A2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,10 +41,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="81" column="35" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="35" />
+            <state relative-caret-position="238">
+              <caret line="191" column="75" lean-forward="true" selection-start-line="191" selection-start-column="75" selection-end-line="191" selection-end-column="75" />
               <folding>
-                <element signature="e#244#845#0" />
+                <element signature="e#624#1822#0" />
+                <element signature="e#1824#2699#0" />
               </folding>
             </state>
           </provider>
@@ -41,6 +58,7 @@
       <find>depth</find>
       <find>cat</find>
       <find>points</find>
+      <find>mvp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -51,15 +69,15 @@
       <list>
         <option value="$PROJECT_DIR$/Loaders/ShaderLoader.h" />
         <option value="$PROJECT_DIR$/Loaders/ShaderLoader.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Loaders/ObjectLoader.h" />
         <option value="$PROJECT_DIR$/Loaders/ObjectLoader.cpp" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Shaders/BasicVertexShader.shader" />
-        <option value="$PROJECT_DIR$/Shaders/BasicFragmentShader.shader" />
         <option value="$PROJECT_DIR$/Controls/KeyboardControls.h" />
         <option value="$PROJECT_DIR$/Controls/KeyboardControls.cpp" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Shaders/BasicFragmentShader.shader" />
       </list>
     </option>
   </component>
@@ -81,7 +99,7 @@
         <subPane>
           <expand>
             <path>
-              <item name="COMP_371_A1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="COMP_371_A2" type="b2602c69:ProjectViewProjectNode" />
               <item name="COMP_371_A2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -96,6 +114,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -165,11 +184,18 @@
       <workItem from="1548863955585" duration="286000" />
       <workItem from="1548891107395" duration="706000" />
       <workItem from="1549565013158" duration="47000" />
+      <workItem from="1549565112410" duration="5028000" />
+      <workItem from="1549573103104" duration="106000" />
+      <workItem from="1549573411869" duration="2217000" />
+      <workItem from="1549719509807" duration="13000" />
+      <workItem from="1549723036132" duration="4871000" />
+      <workItem from="1549727968766" duration="1657000" />
+      <workItem from="1549749668196" duration="3047000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48054000" />
+    <option name="totallyTimeSpent" value="64993000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -182,13 +208,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24656427" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21422797" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899627" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32899627" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35873607" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -222,13 +249,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Loaders/ObjectLoader.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -245,65 +265,6 @@
           <caret line="14" column="80" lean-forward="true" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaders/BasicVertexShader.shader">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaders/BasicFragmentShader.shader">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controls/KeyboardControls.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2790">
-          <caret line="147" column="29" selection-start-line="147" selection-start-column="29" selection-end-line="147" selection-end-column="29" />
-          <folding>
-            <element signature="e#86#103#0" expanded="true" />
-            <element signature="e#209#606#0" />
-            <element signature="e#722#1119#0" />
-            <element signature="e#1235#1632#0" />
-            <element signature="e#1748#2145#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controls/KeyboardControls.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1127">
-          <caret line="162" selection-start-line="162" selection-end-line="162" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <element signature="e#51#614#0" />
-            <element signature="e#616#1181#0" />
-            <element signature="e#1183#1751#0" />
-            <element signature="e#1753#2324#0" />
-            <element signature="e#2326#2884#0" />
-            <element signature="e#2886#3446#0" />
-            <element signature="e#3448#3949#0" />
-            <element signature="e#3951#4448#0" />
-            <element signature="e#4450#4944#0" />
-            <element signature="e#4946#5441#0" />
-            <element signature="e#5443#5960#0" />
-            <element signature="e#5962#6478#0" />
-            <element signature="e#6480#6996#0" />
-            <element signature="e#6998#7537#0" />
-            <element signature="e#7539#8079#0" />
-            <element signature="e#8081#8620#0" />
-            <element signature="e#8622#9162#0" />
-            <element signature="e#9164#9713#0" />
-            <element signature="e#9715#10269#0" />
-            <element signature="e#10271#10614#0" />
-            <element signature="e#10616#10962#0" />
           </folding>
         </state>
       </provider>
@@ -339,12 +300,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GLEW/include/GL/glew.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1930" column="8" selection-start-line="1930" selection-start-column="8" selection-end-line="1930" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controls/KeyboardControls.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="177" column="34" lean-forward="true" selection-start-line="177" selection-start-column="34" selection-end-line="177" selection-end-column="34" />
+          <folding>
+            <element signature="e#86#103#0" expanded="true" />
+            <element signature="e#209#606#0" />
+            <element signature="e#722#1119#0" />
+            <element signature="e#1235#1632#0" />
+            <element signature="e#1748#2145#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controls/KeyboardControls.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="260" selection-start-line="260" selection-end-line="260" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#51#580#0" />
+            <element signature="e#582#1113#0" />
+            <element signature="e#1115#1649#0" />
+            <element signature="e#1651#2188#0" />
+            <element signature="e#2190#2716#0" />
+            <element signature="e#2718#3246#0" />
+            <element signature="e#3248#3715#0" />
+            <element signature="e#3717#4180#0" />
+            <element signature="e#4182#4642#0" />
+            <element signature="e#4644#5105#0" />
+            <element signature="e#5107#5592#0" />
+            <element signature="e#5594#6078#0" />
+            <element signature="e#6080#6564#0" />
+            <element signature="e#6566#7073#0" />
+            <element signature="e#7075#7583#0" />
+            <element signature="e#7585#8092#0" />
+            <element signature="e#8094#8602#0" />
+            <element signature="e#8604#9121#0" />
+            <element signature="e#9123#9645#0" />
+            <element signature="e#9647#9956#0" />
+            <element signature="e#9958#10270#0" />
+            <element signature="e#10272#11024#0" />
+            <element signature="e#11026#11520#0" />
+            <element signature="e#11522#12007#0" />
+            <element signature="e#12009#12628#0" />
+            <element signature="e#12630#13008#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/PhongVertexShader.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/PhongFragmentShader.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="33" column="57" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="81" column="35" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="35" />
+        <state relative-caret-position="238">
+          <caret line="191" column="75" lean-forward="true" selection-start-line="191" selection-start-column="75" selection-end-line="191" selection-end-column="75" />
           <folding>
-            <element signature="e#244#845#0" />
+            <element signature="e#624#1822#0" />
+            <element signature="e#1824#2699#0" />
           </folding>
         </state>
       </provider>

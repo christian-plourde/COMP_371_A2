@@ -3,9 +3,15 @@
 #include <GLFW/glfw3.h>
 #include "GLM/glm/matrix.hpp"
 #include "GLM/glm/gtc/matrix_transform.hpp"
+#include "GLM/glm/gtc/type_ptr.hpp"
 #include "Loaders/ShaderLoader.h"
 #include "Loaders/ObjectLoader.h"
 #include "Controls/KeyboardControls.h"
+
+GLuint lightOn; //a flag to determine whether or not the light should be on (1 is on, 0 is off)
+GLuint programID; //this variable will be assigned the program ID of the shader program
+                  //since we need it to modify the color channels, we will make it global
+                  //so we can use it in the keyboard callback method
 
 /*
  * This is the method that will execute when there is input from the keyboard.
@@ -22,6 +28,24 @@ void keyboard_callback(GLFWwindow* window, int key, int scancode, int action, in
     {
         glfwSetWindowShouldClose(window, true);
     }
+
+    //controls what occurs when the '1' key is pressed
+    if(glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS)
+        key_press_1(programID);
+
+    //controls what happens when the '2' key is pressed
+    if(glfwGetKey(window, GLFW_KEY_2) == GLFW_PRESS)
+        key_press_2(programID);
+
+    //controls what happens when the '3' key is pressed
+    if(glfwGetKey(window, GLFW_KEY_3) == GLFW_PRESS)
+        key_press_3(programID);
+
+    if(glfwGetKey(window, GLFW_KEY_4) == GLFW_PRESS)
+        key_press_4(programID);
+
+    if(glfwGetKey(window, GLFW_KEY_6) == GLFW_PRESS)
+        key_press_6(programID);
 }
 
 /*
@@ -38,7 +62,7 @@ static GLFWwindow* initialize()
     // Create a windowed mode window and its OpenGL context
     int width =  800;
     int height = 800;
-    window = glfwCreateWindow(width, height, "COMP 371 A1", NULL, NULL);
+    window = glfwCreateWindow(width, height, "COMP 371 A2", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
@@ -94,7 +118,14 @@ int main()
     glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
     glBufferData(GL_ARRAY_BUFFER, sizeof(glm::vec3)*vertices.size(), &vertices.front(), GL_STATIC_DRAW);
 
-    GLuint programID = LoadShaders("../Shaders/BasicVertexShader.shader", "../Shaders/BasicFragmentShader.shader");
+    //for the lighting, we also need the normals, therefore we should create another vbo
+    GLuint normalBuffer;
+    glGenBuffers(1, &normalBuffer);
+    glBindBuffer(GL_ARRAY_BUFFER, normalBuffer);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(glm::vec3)*normals.size(), &normals.front(), GL_STATIC_DRAW);
+
+    //now we load the shader program and assign it tour our program id
+    programID = LoadShaders("../Shaders/PhongVertexShader.shader", "../Shaders/PhongFragmentShader.shader");
     glUseProgram(programID);
 
     //in order for this object to be viewed from a perspective view, we need a Model View Projection matrix
@@ -114,16 +145,53 @@ int main()
     //such as scaling, translation, etc.
     glm::mat4 Model = glm::mat4(1.0f);
 
-    //this is the model view projection matrix that we will pass to GLSL
-    glm::mat4 MVP = Projection*View*Model;
-
-    //now that we have created our matrix, we need to get a handle for it
-    GLuint MatrixID = glGetUniformLocation(programID, "MVP");
+    //now that we have all three of out matrices, we should get handles for each of them since we will need them
+    //in our shaders
+    GLuint view_mat_ID = glGetUniformLocation(programID, "view_matrix");
+    GLuint model_mat_ID = glGetUniformLocation(programID, "model_matrix");
+    GLuint projection_mat_ID = glGetUniformLocation(programID, "projection_matrix");
 
     //now that we have an identifier for it, we should set it to our bound shader, the vertex shader
-    glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
+    glUniformMatrix4fv(view_mat_ID, 1, GL_FALSE, &View[0][0]);
+    glUniformMatrix4fv(model_mat_ID, 1, GL_FALSE, &Model[0][0]);
+    glUniformMatrix4fv(projection_mat_ID, 1, GL_FALSE, &Projection[0][0]);
 
-    //we need to defined two doubles to hold the old and new positions of the mouse cursor so we can check
+    //we should also get a handle for the model
+
+    //since we will be toggling the different colors on and off, we will use uniforms to do this.
+    //we need to create a float uniform for each channel so we can control them separately
+    //to do this we first obtain an id for the location of the uniform and then set its value using
+    //glUniform1f since the value is a single float value
+
+    GLuint red_channel_id = glGetUniformLocation(programID, "red_channel");
+    glUniform1f(red_channel_id, 1.0f);
+
+    GLuint green_channel_id = glGetUniformLocation(programID, "green_channel");
+    glUniform1f(green_channel_id, 1.0f);
+
+    GLuint blue_channel_id = glGetUniformLocation(programID, "blue_channel");
+    glUniform1f(blue_channel_id, 1.0f);
+
+    //we also need to define a few uniforms for the light
+    //first is our flag to turn the light on and off
+    lightOn = glGetUniformLocation(programID, "light_on");
+    glUniform1i(lightOn, 1); //initially the light will be on
+
+    //next is the position of our light
+    //this is important for the diffuse lighting component
+    GLuint light_position = glGetUniformLocation(programID, "light_position");
+    glUniform3fv(light_position, 1, glm::value_ptr(glm::vec3(0, 20, 5)));
+
+    //this will initialize the light_color uniform in the fragment shader to a white light
+    GLuint light_color = glGetUniformLocation(programID, "light_color");
+    glUniform3fv(light_color, 1, glm::value_ptr(glm::vec3(0.8,0.8,0.8)));
+
+    //we also need to initialize the uniforms needed for the specular light component.
+    //this consists of the view position only
+    GLuint view_position = glGetUniformLocation(programID, "view_position");
+    glUniform3fv(view_position, 1, glm::value_ptr(glm::vec3(100,100,100)));
+
+    //we need to define two doubles to hold the old and new positions of the mouse cursor so we can check
     //which direction the user is moving the mouse in.
 
     double oldMouseY = 0;
@@ -145,6 +213,11 @@ int main()
         glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
 
+        //we also need to enable the normals array
+        glEnableVertexAttribArray(1);
+        glBindBuffer(GL_ARRAY_BUFFER, normalBuffer);
+        glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
+
         //this will allow us to access that buffer in GLSL
 
         //this configures the z-buffer so that only elements that are closer will be drawn
@@ -152,8 +225,10 @@ int main()
         glDepthFunc(GL_LESS);
 
         //here we need to specify the number of vertices we wish to draw
-        glDrawArrays(GL_POINTS, 0, vertices.size());
+        //for this assignment, they should be drawn using triangles
+        glDrawArrays(GL_TRIANGLES, 0, vertices.size());
         glDisableVertexAttribArray(0);
+        glDisableVertexAttribArray(1);
 
         // Swap front and back buffers
         glfwSwapBuffers(window);

@@ -147,3 +147,32 @@ void key_press_lm_button_up(GLFWwindow* window, glm::mat4& View, glm::mat4& Proj
  */
 void key_press_lm_button_down(GLFWwindow* window, glm::mat4& View, glm::mat4& Projection, glm::mat4& Model, GLuint& ShaderID);
 
+/*
+ * This method defines what occurs when the '1' key is pressed. When this occurs, if the 'red' channel in the fragment
+ * has a value of 1.0, then the value should be changed to 0.0 (off) and vice-versa.
+ */
+void key_press_1(GLuint program_ID);
+
+/*
+ * This method defines what occurs when the '2' key is pressed. When this occurs, if the 'green' channel in the fragment
+ * has a value of 1.0, then the value should be changed to 0.0 (off) and vice-versa.
+ */
+void key_press_2(GLuint program_ID);
+
+/*
+ * This method defines what occurs when the '3' key is pressed. When this occurs, if the 'blue' channel in the fragment
+ * has a value of 1.0, then the value should be changed to 0.0 (off) and vice-versa.
+ */
+void key_press_3(GLuint program_ID);
+
+/*
+ * This method defines what occurs when the '4' key is pressed. When this occurs, all the color channels are turned
+ * on.
+ */
+void key_press_4(GLuint program_ID);
+
+/*
+ * This method defines what happens when the '6' key is pressed. When this occurs, the lights should be toggled on
+ * and off.
+ */
+void key_press_6(GLuint program_ID);
