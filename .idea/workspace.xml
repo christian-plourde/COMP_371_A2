@@ -12,20 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa210c78-ec2f-4fca-9937-978a4ea5baa1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Shaders/PhongFragmentShader.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shaders/PhongVertexShader.shader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controls/KeyboardControls.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controls/KeyboardControls.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controls/KeyboardControls.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controls/KeyboardControls.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shaders/BasicFragmentShader.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shaders/BasicVertexShader.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/Controls/KeyboardControls.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/Controls/KeyboardControls.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP_371_A2.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/COMP_371_A2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/COMP_371_A2.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -41,11 +30,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="191" column="75" lean-forward="true" selection-start-line="191" selection-start-column="75" selection-end-line="191" selection-end-column="75" />
+            <state relative-caret-position="-4344">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
               <folding>
-                <element signature="e#624#1822#0" />
-                <element signature="e#1824#2699#0" />
+                <element signature="e#1020#2414#0" />
+                <element signature="e#2416#3749#0" />
+                <element signature="e#3751#4626#0" />
               </folding>
             </state>
           </provider>
@@ -74,10 +64,12 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Shaders/BasicVertexShader.shader" />
+        <option value="$PROJECT_DIR$/Shaders/BasicFragmentShader.shader" />
+        <option value="$PROJECT_DIR$/Shaders/GouraudVertexShader.shader" />
+        <option value="$PROJECT_DIR$/Shaders/GouraudFragmentShader.shader" />
         <option value="$PROJECT_DIR$/Controls/KeyboardControls.h" />
         <option value="$PROJECT_DIR$/Controls/KeyboardControls.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/Shaders/BasicFragmentShader.shader" />
       </list>
     </option>
   </component>
@@ -101,6 +93,11 @@
             <path>
               <item name="COMP_371_A2" type="b2602c69:ProjectViewProjectNode" />
               <item name="COMP_371_A2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="COMP_371_A2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="COMP_371_A2" type="462c0819:PsiDirectoryNode" />
+              <item name="Controls" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -190,12 +187,13 @@
       <workItem from="1549719509807" duration="13000" />
       <workItem from="1549723036132" duration="4871000" />
       <workItem from="1549727968766" duration="1657000" />
-      <workItem from="1549749668196" duration="3047000" />
+      <workItem from="1549749668196" duration="3159000" />
+      <workItem from="1549829727539" duration="5158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64993000" />
+    <option name="totallyTimeSpent" value="70263000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -210,7 +208,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21422797" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2174616" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -314,10 +312,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/PhongVertexShader.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/PhongFragmentShader.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="33" column="57" selection-end-line="50" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Controls/KeyboardControls.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="177" column="34" lean-forward="true" selection-start-line="177" selection-start-column="34" selection-end-line="177" selection-end-column="34" />
+        <state relative-caret-position="169">
+          <caret line="185" column="56" selection-start-line="185" selection-start-column="56" selection-end-line="185" selection-end-column="56" />
           <folding>
             <element signature="e#86#103#0" expanded="true" />
             <element signature="e#209#606#0" />
@@ -328,63 +340,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/mmcobj.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="129" column="20" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/GouraudFragmentShader.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/GouraudVertexShader.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Controls/KeyboardControls.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="260" selection-start-line="260" selection-end-line="260" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <element signature="e#51#580#0" />
-            <element signature="e#582#1113#0" />
-            <element signature="e#1115#1649#0" />
-            <element signature="e#1651#2188#0" />
-            <element signature="e#2190#2716#0" />
-            <element signature="e#2718#3246#0" />
-            <element signature="e#3248#3715#0" />
-            <element signature="e#3717#4180#0" />
-            <element signature="e#4182#4642#0" />
-            <element signature="e#4644#5105#0" />
-            <element signature="e#5107#5592#0" />
-            <element signature="e#5594#6078#0" />
-            <element signature="e#6080#6564#0" />
-            <element signature="e#6566#7073#0" />
-            <element signature="e#7075#7583#0" />
-            <element signature="e#7585#8092#0" />
-            <element signature="e#8094#8602#0" />
-            <element signature="e#8604#9121#0" />
-            <element signature="e#9123#9645#0" />
-            <element signature="e#9647#9956#0" />
-            <element signature="e#9958#10270#0" />
-            <element signature="e#10272#11024#0" />
-            <element signature="e#11026#11520#0" />
-            <element signature="e#11522#12007#0" />
-            <element signature="e#12009#12628#0" />
-            <element signature="e#12630#13008#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaders/PhongVertexShader.shader">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaders/PhongFragmentShader.shader">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="33" column="57" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+        <state relative-caret-position="270">
+          <caret line="289" column="33" selection-start-line="289" selection-start-column="33" selection-end-line="289" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="191" column="75" lean-forward="true" selection-start-line="191" selection-start-column="75" selection-end-line="191" selection-end-column="75" />
+        <state relative-caret-position="-4344">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
-            <element signature="e#624#1822#0" />
-            <element signature="e#1824#2699#0" />
+            <element signature="e#1020#2414#0" />
+            <element signature="e#2416#3749#0" />
+            <element signature="e#3751#4626#0" />
           </folding>
         </state>
       </provider>

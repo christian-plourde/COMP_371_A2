@@ -76,6 +76,7 @@ CMakeFiles/COMP_371_A2.dir/Controls/KeyboardControls.cpp.obj: ../GLM/glm/trigono
 CMakeFiles/COMP_371_A2.dir/Controls/KeyboardControls.cpp.obj: ../GLM/glm/vec2.hpp
 CMakeFiles/COMP_371_A2.dir/Controls/KeyboardControls.cpp.obj: ../GLM/glm/vec3.hpp
 CMakeFiles/COMP_371_A2.dir/Controls/KeyboardControls.cpp.obj: ../GLM/glm/vec4.hpp
+CMakeFiles/COMP_371_A2.dir/Controls/KeyboardControls.cpp.obj: ../Loaders/ShaderLoader.h
 
 CMakeFiles/COMP_371_A2.dir/Loaders/ObjectLoader.cpp.obj: ../GLM/glm/common.hpp
 CMakeFiles/COMP_371_A2.dir/Loaders/ObjectLoader.cpp.obj: ../GLM/glm/detail/_fixes.hpp

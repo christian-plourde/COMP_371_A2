@@ -1,4 +1,5 @@
 #include "KeyboardControls.h"
+#include "../Loaders/ShaderLoader.h"
 #include <iostream>
 
 void key_press_w(GLFWwindow* window, glm::mat4& View, glm::mat4& Projection, glm::mat4& Model, GLuint& ShaderID)
@@ -268,4 +269,25 @@ void key_press_6(GLuint program_ID)
         glUniform1i(light_on_id, 0);
     else
         glUniform1i(light_on_id, 1);
+}
+
+void key_press_5(GLuint& program_ID, GLboolean& gouraud)
+{
+    //there are two cases, either gouraud is true, in which case, we should load the phong shaders and flip it, or
+    //it is false, and we should load the gouraud shaders and flip it.
+    if(gouraud)
+    {
+        std::cout << "Switching to Phong Illumination Model..." << std::endl;
+        program_ID = LoadShaders("../Shaders/PhongVertexShader.shader", "../Shaders/PhongFragmentShader.shader");
+        glUseProgram(program_ID);
+        gouraud = GL_FALSE;
+    }
+
+    else
+    {
+        std::cout << "Switching to Gouraud Illumination Model..." << std::endl;
+        program_ID = LoadShaders("../Shaders/GouraudVertexShader.shader", "../Shaders/GouraudFragmentShader.shader");
+        glUseProgram(program_ID);
+        gouraud = GL_TRUE;
+    }
 }

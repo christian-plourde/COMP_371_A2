@@ -176,3 +176,11 @@ void key_press_4(GLuint program_ID);
  * and off.
  */
 void key_press_6(GLuint program_ID);
+
+/*
+ * This method defines what happens when the '5' key is pressed. When this occurs, the lighting model should toggle
+ * between Gouraud and Phong. This will be done by loading the appropriate shaders, one done for each lighting model.
+ * We pass the program_id by reference since it will eventually point to the new shader program, and also a flag
+ * indicating if we are currently using gouraud lighting or not. This flag will get flipped by the method.
+ */
+void key_press_5(GLuint& program_ID, GLboolean& gouraud);

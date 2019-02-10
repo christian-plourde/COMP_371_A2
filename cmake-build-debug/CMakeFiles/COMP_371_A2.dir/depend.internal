@@ -77,6 +77,7 @@ CMakeFiles/COMP_371_A2.dir/Controls/KeyboardControls.cpp.obj
  D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/vec2.hpp
  D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/vec3.hpp
  D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/vec4.hpp
+ D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/Loaders/ShaderLoader.h
 CMakeFiles/COMP_371_A2.dir/Loaders/ObjectLoader.cpp.obj
  ../GLM/glm/common.hpp
  ../GLM/glm/detail/_fixes.hpp

@@ -8,10 +8,66 @@
 #include "Loaders/ObjectLoader.h"
 #include "Controls/KeyboardControls.h"
 
+//definition of all the uniforms
+GLuint view_mat_ID;
+GLuint model_mat_ID;
+GLuint projection_mat_ID;
+glm::mat4 Model;
+glm::mat4 Projection;
+glm::mat4 View;
+GLuint red_channel_id;
+GLuint blue_channel_id;
+GLuint green_channel_id;
+GLuint light_position;
+GLuint light_color;
+GLuint view_position;
+
 GLuint lightOn; //a flag to determine whether or not the light should be on (1 is on, 0 is off)
+GLboolean gouraud_flag; //this determines if we use gouraud or not (alternative is phong) for lighting
 GLuint programID; //this variable will be assigned the program ID of the shader program
                   //since we need it to modify the color channels, we will make it global
                   //so we can use it in the keyboard callback method
+
+/*
+ * Method to reset the values of all the uniforms for the new program id when we switch shaders.
+ */
+void setUniforms()
+{
+    //first we get handles for all of the matrix uniforms to use in our MVP matrix and we set their values
+    //according to the matrices defined in the main method
+    view_mat_ID = glGetUniformLocation(programID, "view_matrix");
+    model_mat_ID = glGetUniformLocation(programID, "model_matrix");
+    projection_mat_ID = glGetUniformLocation(programID, "projection_matrix");
+    glUniformMatrix4fv(view_mat_ID, 1, GL_FALSE, &View[0][0]);
+    glUniformMatrix4fv(model_mat_ID, 1, GL_FALSE, &Model[0][0]);
+    glUniformMatrix4fv(projection_mat_ID, 1, GL_FALSE, &Projection[0][0]);
+
+    //next we need to set up three uniforms, one for each color channel since we will be implementing controls
+    //to toggle each one on and off.
+    red_channel_id = glGetUniformLocation(programID, "red_channel");
+    glUniform1f(red_channel_id, 1.0f);
+    green_channel_id = glGetUniformLocation(programID, "green_channel");
+    glUniform1f(green_channel_id, 1.0f);
+    blue_channel_id = glGetUniformLocation(programID, "blue_channel");
+    glUniform1f(blue_channel_id, 1.0f);
+
+    //next is a uniform to turn on and off the light as a whole. (No light means no lighting model is used)
+    lightOn = glGetUniformLocation(programID, "light_on");
+    glUniform1i(lightOn, 1);
+
+    //this is the uniform that defines the position of the light
+    light_position = glGetUniformLocation(programID, "light_position");
+    glUniform3fv(light_position, 1, glm::value_ptr(glm::vec3(0, 20, 5)));
+
+    //this is uniform that defines the color of the light
+    light_color = glGetUniformLocation(programID, "light_color");
+    glUniform3fv(light_color, 1, glm::value_ptr(glm::vec3(0.8,0.8,0.8)));
+
+    //this is the view position of the camera. This is important for calculating the impact of the specular light
+    //component.
+    view_position = glGetUniformLocation(programID, "view_position");
+    glUniform3fv(view_position, 1, glm::value_ptr(glm::vec3(100,100,100)));
+}
 
 /*
  * This is the method that will execute when there is input from the keyboard.
@@ -46,6 +102,12 @@ void keyboard_callback(GLFWwindow* window, int key, int scancode, int action, in
 
     if(glfwGetKey(window, GLFW_KEY_6) == GLFW_PRESS)
         key_press_6(programID);
+
+    if(glfwGetKey(window, GLFW_KEY_5) == GLFW_PRESS)
+    {
+        key_press_5(programID, gouraud_flag);
+        setUniforms();
+    }
 }
 
 /*
@@ -125,6 +187,8 @@ int main()
     glBufferData(GL_ARRAY_BUFFER, sizeof(glm::vec3)*normals.size(), &normals.front(), GL_STATIC_DRAW);
 
     //now we load the shader program and assign it tour our program id
+    //initially, we use the Phong illumination model
+    gouraud_flag = GL_FALSE;
     programID = LoadShaders("../Shaders/PhongVertexShader.shader", "../Shaders/PhongFragmentShader.shader");
     glUseProgram(programID);
 
@@ -136,60 +200,17 @@ int main()
     glfwGetWindowSize(window, &width, &height);
 
     //this creates an perspective projection matrix which we will use to render our object
-    glm::mat4 Projection = glm::perspective(glm::radians(45.0f), (float)width/height, 0.1f, 200.0f);
+    Projection = glm::perspective(glm::radians(45.0f), (float)width/height, 0.1f, 200.0f);
     //we then need a camera matrix, we will make it look at the origin
-    glm::mat4 View = glm::lookAt(glm::vec3(0,0,-40),glm::vec3(0,0,0), glm::vec3(0, 1, 0));
+    View = glm::lookAt(glm::vec3(0,0,-40),glm::vec3(0,0,0), glm::vec3(0, 1, 0));
 
     //this is the model matrix (the identity matrix since we are placing the mode (our triangle) at the origin.
     //also changing this will modify what the final triangle looks like. This is where we apply transformations
     //such as scaling, translation, etc.
-    glm::mat4 Model = glm::mat4(1.0f);
+    Model = glm::mat4(1.0f);
 
-    //now that we have all three of out matrices, we should get handles for each of them since we will need them
-    //in our shaders
-    GLuint view_mat_ID = glGetUniformLocation(programID, "view_matrix");
-    GLuint model_mat_ID = glGetUniformLocation(programID, "model_matrix");
-    GLuint projection_mat_ID = glGetUniformLocation(programID, "projection_matrix");
-
-    //now that we have an identifier for it, we should set it to our bound shader, the vertex shader
-    glUniformMatrix4fv(view_mat_ID, 1, GL_FALSE, &View[0][0]);
-    glUniformMatrix4fv(model_mat_ID, 1, GL_FALSE, &Model[0][0]);
-    glUniformMatrix4fv(projection_mat_ID, 1, GL_FALSE, &Projection[0][0]);
-
-    //we should also get a handle for the model
-
-    //since we will be toggling the different colors on and off, we will use uniforms to do this.
-    //we need to create a float uniform for each channel so we can control them separately
-    //to do this we first obtain an id for the location of the uniform and then set its value using
-    //glUniform1f since the value is a single float value
-
-    GLuint red_channel_id = glGetUniformLocation(programID, "red_channel");
-    glUniform1f(red_channel_id, 1.0f);
-
-    GLuint green_channel_id = glGetUniformLocation(programID, "green_channel");
-    glUniform1f(green_channel_id, 1.0f);
-
-    GLuint blue_channel_id = glGetUniformLocation(programID, "blue_channel");
-    glUniform1f(blue_channel_id, 1.0f);
-
-    //we also need to define a few uniforms for the light
-    //first is our flag to turn the light on and off
-    lightOn = glGetUniformLocation(programID, "light_on");
-    glUniform1i(lightOn, 1); //initially the light will be on
-
-    //next is the position of our light
-    //this is important for the diffuse lighting component
-    GLuint light_position = glGetUniformLocation(programID, "light_position");
-    glUniform3fv(light_position, 1, glm::value_ptr(glm::vec3(0, 20, 5)));
-
-    //this will initialize the light_color uniform in the fragment shader to a white light
-    GLuint light_color = glGetUniformLocation(programID, "light_color");
-    glUniform3fv(light_color, 1, glm::value_ptr(glm::vec3(0.8,0.8,0.8)));
-
-    //we also need to initialize the uniforms needed for the specular light component.
-    //this consists of the view position only
-    GLuint view_position = glGetUniformLocation(programID, "view_position");
-    glUniform3fv(view_position, 1, glm::value_ptr(glm::vec3(100,100,100)));
+    //now that we have our matrices, we should set all of our uniforms
+    setUniforms();
 
     //we need to define two doubles to hold the old and new positions of the mouse cursor so we can check
     //which direction the user is moving the mouse in.
