@@ -278,7 +278,7 @@ void key_press_5(GLuint& program_ID, GLboolean& gouraud)
     if(gouraud)
     {
         std::cout << "Switching to Phong Illumination Model..." << std::endl;
-        program_ID = LoadShaders("../Shaders/PhongVertexShader.shader", "../Shaders/PhongFragmentShader.shader");
+        program_ID = LoadShaders("../Shaders/PhongVertexShader.glsl", "../Shaders/PhongFragmentShader.glsl");
         glUseProgram(program_ID);
         gouraud = GL_FALSE;
     }
@@ -286,7 +286,7 @@ void key_press_5(GLuint& program_ID, GLboolean& gouraud)
     else
     {
         std::cout << "Switching to Gouraud Illumination Model..." << std::endl;
-        program_ID = LoadShaders("../Shaders/GouraudVertexShader.shader", "../Shaders/GouraudFragmentShader.shader");
+        program_ID = LoadShaders("../Shaders/GouraudVertexShader.glsl", "../Shaders/GouraudFragmentShader.glsl");
         glUseProgram(program_ID);
         gouraud = GL_TRUE;
     }

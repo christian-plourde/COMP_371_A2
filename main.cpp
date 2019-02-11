@@ -189,7 +189,7 @@ int main()
     //now we load the shader program and assign it tour our program id
     //initially, we use the Phong illumination model
     gouraud_flag = GL_FALSE;
-    programID = LoadShaders("../Shaders/PhongVertexShader.shader", "../Shaders/PhongFragmentShader.shader");
+    programID = LoadShaders("../Shaders/PhongVertexShader.glsl", "../Shaders/PhongFragmentShader.glsl");
     glUseProgram(programID);
 
     //in order for this object to be viewed from a perspective view, we need a Model View Projection matrix
