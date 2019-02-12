@@ -24,6 +24,8 @@ GLuint view_position;
 
 GLuint lightOn; //a flag to determine whether or not the light should be on (1 is on, 0 is off)
 GLboolean gouraud_flag; //this determines if we use gouraud or not (alternative is phong) for lighting
+GLuint normal_as_color; //this is a flag to determine if the normal should be used as color (M key toggles on/off)
+GLuint gray_scale; //this is a flag to determine if the scene should be rendered in grayscale or not (key G)
 GLuint programID; //this variable will be assigned the program ID of the shader program
                   //since we need it to modify the color channels, we will make it global
                   //so we can use it in the keyboard callback method
@@ -67,6 +69,15 @@ void setUniforms()
     //component.
     view_position = glGetUniformLocation(programID, "view_position");
     glUniform3fv(view_position, 1, glm::value_ptr(glm::vec3(100,100,100)));
+
+    //we also need to set the flag to determine if the normal should be used as the color
+    normal_as_color = glGetUniformLocation(programID, "normal_as_color");
+    glUniform1i(normal_as_color, 0);
+
+    //we also need to set the flag to determine if the scene should be rendered in grayscale or not
+    //initially it will be set to not do it in grayscale.
+    gray_scale = glGetUniformLocation(programID, "gray_scale");
+    glUniform1i(gray_scale, 0);
 }
 
 /*
@@ -108,6 +119,12 @@ void keyboard_callback(GLFWwindow* window, int key, int scancode, int action, in
         key_press_5(programID, gouraud_flag);
         setUniforms();
     }
+
+    if(glfwGetKey(window, GLFW_KEY_M) == GLFW_PRESS)
+        key_press_m(programID);
+
+    if(glfwGetKey(window, GLFW_KEY_G) == GLFW_PRESS)
+        key_press_g(programID);
 }
 
 /*

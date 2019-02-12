@@ -184,3 +184,15 @@ void key_press_6(GLuint program_ID);
  * indicating if we are currently using gouraud lighting or not. This flag will get flipped by the method.
  */
 void key_press_5(GLuint& program_ID, GLboolean& gouraud);
+
+/*
+ * This method defines what happens when the 'm' key is pressed. When this occurs, the normal_as_color uniform should
+ * be toggled between 0 and 1, to determine if the normal should be used as the fragment color or not.
+ */
+void key_press_m(GLuint program_ID);
+
+/*
+ * This method defines what happens when the 'g' key is pressed. When this occurs, it should toggle between grayscale
+ * rendering mode by flipping the flag in the shader program.
+ */
+void key_press_g(GLuint program_ID);

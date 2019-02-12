@@ -291,3 +291,43 @@ void key_press_5(GLuint& program_ID, GLboolean& gouraud)
         gouraud = GL_TRUE;
     }
 }
+
+void key_press_m(GLuint program_ID)
+{
+    //first we must check the value of the uniform
+    GLint flag_value;
+    glGetUniformiv(program_ID, glGetUniformLocation(program_ID, "normal_as_color"), &flag_value);
+
+    //now that we have the current value, we should flip it
+    if(flag_value == 1)
+    {
+        GLuint flag_location = glGetUniformLocation(program_ID, "normal_as_color");
+        glUniform1i(flag_location, 0);
+    }
+
+    else
+    {
+        GLuint flag_location = glGetUniformLocation(program_ID, "normal_as_color");
+        glUniform1i(flag_location, 1);
+    }
+}
+
+void key_press_g(GLuint program_ID)
+{
+    //first we must check the value of the uniform
+    GLint flag_value;
+    glGetUniformiv(program_ID, glGetUniformLocation(program_ID, "gray_scale"), &flag_value);
+
+    //now that we have the current value, we should flip it
+    if(flag_value == 1)
+    {
+        GLuint flag_location = glGetUniformLocation(program_ID, "gray_scale");
+        glUniform1i(flag_location, 0);
+    }
+
+    else
+    {
+        GLuint flag_location = glGetUniformLocation(program_ID, "gray_scale");
+        glUniform1i(flag_location, 1);
+    }
+}

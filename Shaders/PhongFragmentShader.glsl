@@ -15,12 +15,27 @@ uniform vec3 view_position;
 //the flag to turn the light on and off
 uniform int light_on;
 
+//the flag to determine if the normal should be used as the color.
+uniform int normal_as_color;
+
+//the flag to use grayscale or not
+uniform int gray_scale;
+
 in vec3 fragment_position;
 in vec3 normal;
 
 void main()
 {
-    color = vec3(red_channel, green_channel, blue_channel);
+    if(normal_as_color == 1)
+    {
+        color = normal;
+    }
+
+    else
+    {
+        color = vec3(red_channel, green_channel, blue_channel);
+    }
+
 
     if(light_on == 1)
     {
@@ -42,6 +57,9 @@ void main()
         vec3 specular = specular_strength*spec_coeff*light_color;
 
         color = (specular + ambient + diffuse)*color;
+
+        if(gray_scale == 1)
+            color = vec3(0.2989*color.x+0.5870*color.y+0.1140*color.z);
     }
 
     else
