@@ -62,13 +62,309 @@ GL/glext.h
 GL/glu.h
 -
 
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/Controls/KeyboardControls.cpp
-KeyboardControls.h
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/Controls/KeyboardControls.h
-../Loaders/ShaderLoader.h
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/Loaders/ShaderLoader.h
-iostream
+../GLM/glm/common.hpp
+detail/func_common.hpp
+../GLM/glm/detail/func_common.hpp
+
+../GLM/glm/detail/_fixes.hpp
+cmath
 -
+
+../GLM/glm/detail/func_common.hpp
+setup.hpp
+../GLM/glm/detail/setup.hpp
+precision.hpp
+../GLM/glm/detail/precision.hpp
+type_int.hpp
+../GLM/glm/detail/type_int.hpp
+_fixes.hpp
+../GLM/glm/detail/_fixes.hpp
+func_common.inl
+../GLM/glm/detail/func_common.inl
+
+../GLM/glm/detail/func_common.inl
+func_vector_relational.hpp
+../GLM/glm/detail/func_vector_relational.hpp
+type_vec2.hpp
+../GLM/glm/detail/type_vec2.hpp
+type_vec3.hpp
+../GLM/glm/detail/type_vec3.hpp
+type_vec4.hpp
+../GLM/glm/detail/type_vec4.hpp
+_vectorize.hpp
+../GLM/glm/detail/_vectorize.hpp
+limits
+-
+
+../GLM/glm/detail/func_exponential.hpp
+type_vec1.hpp
+../GLM/glm/detail/type_vec1.hpp
+type_vec2.hpp
+../GLM/glm/detail/type_vec2.hpp
+type_vec3.hpp
+../GLM/glm/detail/type_vec3.hpp
+type_vec4.hpp
+../GLM/glm/detail/type_vec4.hpp
+cmath
+-
+func_exponential.inl
+../GLM/glm/detail/func_exponential.inl
+
+../GLM/glm/detail/func_exponential.inl
+func_vector_relational.hpp
+../GLM/glm/detail/func_vector_relational.hpp
+_vectorize.hpp
+../GLM/glm/detail/_vectorize.hpp
+limits
+-
+cmath
+-
+cassert
+-
+
+../GLM/glm/detail/func_integer.hpp
+setup.hpp
+../GLM/glm/detail/setup.hpp
+precision.hpp
+../GLM/glm/detail/precision.hpp
+func_common.hpp
+../GLM/glm/detail/func_common.hpp
+func_vector_relational.hpp
+../GLM/glm/detail/func_vector_relational.hpp
+func_integer.inl
+../GLM/glm/detail/func_integer.inl
+
+../GLM/glm/detail/func_integer.inl
+type_vec2.hpp
+../GLM/glm/detail/type_vec2.hpp
+type_vec3.hpp
+../GLM/glm/detail/type_vec3.hpp
+type_vec4.hpp
+../GLM/glm/detail/type_vec4.hpp
+type_int.hpp
+../GLM/glm/detail/type_int.hpp
+_vectorize.hpp
+../GLM/glm/detail/_vectorize.hpp
+intrin.h
+-
+limits
+-
+
+../GLM/glm/detail/func_packing.hpp
+type_vec2.hpp
+../GLM/glm/detail/type_vec2.hpp
+type_vec4.hpp
+../GLM/glm/detail/type_vec4.hpp
+func_packing.inl
+../GLM/glm/detail/func_packing.inl
+
+../GLM/glm/detail/func_packing.inl
+func_common.hpp
+../GLM/glm/detail/func_common.hpp
+type_half.hpp
+../GLM/glm/detail/type_half.hpp
+../fwd.hpp
+../GLM/glm/fwd.hpp
+
+../GLM/glm/detail/func_vector_relational.hpp
+precision.hpp
+../GLM/glm/detail/precision.hpp
+setup.hpp
+../GLM/glm/detail/setup.hpp
+func_vector_relational.inl
+../GLM/glm/detail/func_vector_relational.inl
+
+../GLM/glm/detail/func_vector_relational.inl
+limits
+-
+
+../GLM/glm/detail/type_float.hpp
+setup.hpp
+../GLM/glm/detail/setup.hpp
+
+../GLM/glm/detail/type_half.hpp
+setup.hpp
+../GLM/glm/detail/setup.hpp
+type_half.inl
+../GLM/glm/detail/type_half.inl
+
+../GLM/glm/detail/type_half.inl
+
+../GLM/glm/detail/type_int.hpp
+setup.hpp
+../GLM/glm/detail/setup.hpp
+type_traits
+-
+cstdint
+-
+
+../GLM/glm/detail/type_mat.hpp
+precision.hpp
+../GLM/glm/detail/precision.hpp
+
+../GLM/glm/detail/type_vec.hpp
+precision.hpp
+../GLM/glm/detail/precision.hpp
+type_int.hpp
+../GLM/glm/detail/type_int.hpp
+
+../GLM/glm/detail/type_vec1.hpp
+../fwd.hpp
+../GLM/glm/fwd.hpp
+type_vec.hpp
+../GLM/glm/detail/type_vec.hpp
+_swizzle.hpp
+../GLM/glm/detail/_swizzle.hpp
+_swizzle_func.hpp
+../GLM/glm/detail/_swizzle_func.hpp
+cstddef
+-
+type_vec1.inl
+../GLM/glm/detail/type_vec1.inl
+
+../GLM/glm/detail/type_vec1.inl
+
+../GLM/glm/exponential.hpp
+detail/func_exponential.hpp
+../GLM/glm/detail/func_exponential.hpp
+
+../GLM/glm/fwd.hpp
+detail/type_int.hpp
+../GLM/glm/detail/type_int.hpp
+detail/type_float.hpp
+../GLM/glm/detail/type_float.hpp
+detail/type_vec.hpp
+../GLM/glm/detail/type_vec.hpp
+detail/type_mat.hpp
+../GLM/glm/detail/type_mat.hpp
+
+../GLM/glm/geometric.hpp
+detail/func_geometric.hpp
+../GLM/glm/detail/func_geometric.hpp
+
+../GLM/glm/glm.hpp
+detail/_fixes.hpp
+../GLM/glm/detail/_fixes.hpp
+cmath
+-
+climits
+-
+cfloat
+-
+limits
+-
+cassert
+-
+fwd.hpp
+../GLM/glm/fwd.hpp
+vec2.hpp
+../GLM/glm/vec2.hpp
+vec3.hpp
+../GLM/glm/vec3.hpp
+vec4.hpp
+../GLM/glm/vec4.hpp
+mat2x2.hpp
+../GLM/glm/mat2x2.hpp
+mat2x3.hpp
+../GLM/glm/mat2x3.hpp
+mat2x4.hpp
+../GLM/glm/mat2x4.hpp
+mat3x2.hpp
+../GLM/glm/mat3x2.hpp
+mat3x3.hpp
+../GLM/glm/mat3x3.hpp
+mat3x4.hpp
+../GLM/glm/mat3x4.hpp
+mat4x2.hpp
+../GLM/glm/mat4x2.hpp
+mat4x3.hpp
+../GLM/glm/mat4x3.hpp
+mat4x4.hpp
+../GLM/glm/mat4x4.hpp
+trigonometric.hpp
+../GLM/glm/trigonometric.hpp
+exponential.hpp
+../GLM/glm/exponential.hpp
+common.hpp
+../GLM/glm/common.hpp
+packing.hpp
+../GLM/glm/packing.hpp
+geometric.hpp
+../GLM/glm/geometric.hpp
+matrix.hpp
+../GLM/glm/matrix.hpp
+vector_relational.hpp
+../GLM/glm/vector_relational.hpp
+integer.hpp
+../GLM/glm/integer.hpp
+
+../GLM/glm/integer.hpp
+detail/func_integer.hpp
+../GLM/glm/detail/func_integer.hpp
+
+../GLM/glm/mat2x2.hpp
+detail/type_mat2x2.hpp
+../GLM/glm/detail/type_mat2x2.hpp
+
+../GLM/glm/mat2x3.hpp
+detail/type_mat2x3.hpp
+../GLM/glm/detail/type_mat2x3.hpp
+
+../GLM/glm/mat2x4.hpp
+detail/type_mat2x4.hpp
+../GLM/glm/detail/type_mat2x4.hpp
+
+../GLM/glm/mat3x2.hpp
+detail/type_mat3x2.hpp
+../GLM/glm/detail/type_mat3x2.hpp
+
+../GLM/glm/mat3x3.hpp
+detail/type_mat3x3.hpp
+../GLM/glm/detail/type_mat3x3.hpp
+
+../GLM/glm/mat3x4.hpp
+detail/type_mat3x4.hpp
+../GLM/glm/detail/type_mat3x4.hpp
+
+../GLM/glm/mat4x2.hpp
+detail/type_mat4x2.hpp
+../GLM/glm/detail/type_mat4x2.hpp
+
+../GLM/glm/mat4x3.hpp
+detail/type_mat4x3.hpp
+../GLM/glm/detail/type_mat4x3.hpp
+
+../GLM/glm/mat4x4.hpp
+detail/type_mat4x4.hpp
+../GLM/glm/detail/type_mat4x4.hpp
+
+../GLM/glm/matrix.hpp
+detail/func_matrix.hpp
+../GLM/glm/detail/func_matrix.hpp
+
+../GLM/glm/packing.hpp
+detail/func_packing.hpp
+../GLM/glm/detail/func_packing.hpp
+
+../GLM/glm/trigonometric.hpp
+detail/func_trigonometric.hpp
+../GLM/glm/detail/func_trigonometric.hpp
+
+../GLM/glm/vec2.hpp
+detail/type_vec2.hpp
+../GLM/glm/detail/type_vec2.hpp
+
+../GLM/glm/vec3.hpp
+detail/type_vec3.hpp
+../GLM/glm/detail/type_vec3.hpp
+
+../GLM/glm/vec4.hpp
+detail/type_vec4.hpp
+../GLM/glm/detail/type_vec4.hpp
+
+../GLM/glm/vector_relational.hpp
+detail/func_vector_relational.hpp
+../GLM/glm/detail/func_vector_relational.hpp
 
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/Controls/KeyboardControls.h
 glew.h
@@ -79,10 +375,6 @@ GLFW/glfw3.h
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/matrix.hpp
 ../GLM/glm/gtc/matrix_transform.hpp
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/gtc/matrix_transform.hpp
-
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/_fixes.hpp
-cmath
--
 
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/_swizzle.hpp
 
@@ -98,32 +390,6 @@ D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/
 type_vec4.hpp
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_vec4.hpp
 
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/func_common.hpp
-setup.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/setup.hpp
-precision.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/precision.hpp
-type_int.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_int.hpp
-_fixes.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/_fixes.hpp
-func_common.inl
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/func_common.inl
-
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/func_common.inl
-func_vector_relational.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/func_vector_relational.hpp
-type_vec2.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_vec2.hpp
-type_vec3.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_vec3.hpp
-type_vec4.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_vec4.hpp
-_vectorize.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/_vectorize.hpp
-limits
--
-
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/func_exponential.hpp
 type_vec1.hpp
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_vec1.hpp
@@ -137,18 +403,6 @@ cmath
 -
 func_exponential.inl
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/func_exponential.inl
-
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/func_exponential.inl
-func_vector_relational.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/func_vector_relational.hpp
-_vectorize.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/_vectorize.hpp
-limits
--
-cmath
--
-cassert
--
 
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/func_geometric.hpp
 type_vec3.hpp
@@ -221,18 +475,6 @@ _vectorize.hpp
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/_vectorize.hpp
 cmath
 -
-limits
--
-
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/func_vector_relational.hpp
-precision.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/precision.hpp
-setup.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/setup.hpp
-func_vector_relational.inl
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/func_vector_relational.inl
-
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/func_vector_relational.inl
 limits
 -
 
@@ -436,22 +678,6 @@ D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/
 type_int.hpp
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_int.hpp
 
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_vec1.hpp
-../fwd.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/fwd.hpp
-type_vec.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_vec.hpp
-_swizzle.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/_swizzle.hpp
-_swizzle_func.hpp
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/_swizzle_func.hpp
-cstddef
--
-type_vec1.inl
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_vec1.inl
-
-D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_vec1.inl
-
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_vec2.hpp
 type_vec.hpp
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_vec.hpp
@@ -508,6 +734,10 @@ D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/
 
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_vec4_sse2.inl
 
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/exponential.hpp
+detail/func_exponential.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/func_exponential.hpp
+
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/fwd.hpp
 detail/type_int.hpp
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_int.hpp
@@ -553,6 +783,66 @@ D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/geometr
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/trigonometric.hpp
 ../matrix.hpp
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/matrix.hpp
+
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/gtc/quaternion.hpp
+../mat3x3.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/mat3x3.hpp
+../mat4x4.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/mat4x4.hpp
+../vec3.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/vec3.hpp
+../vec4.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/vec4.hpp
+../gtc/constants.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/gtc/constants.hpp
+quaternion.inl
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/gtc/quaternion.inl
+
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/gtc/quaternion.inl
+../trigonometric.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/trigonometric.hpp
+../geometric.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/geometric.hpp
+../exponential.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/exponential.hpp
+limits
+-
+
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/gtc/type_ptr.hpp
+../gtc/quaternion.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/gtc/quaternion.hpp
+../vec2.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/vec2.hpp
+../vec3.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/vec3.hpp
+../vec4.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/vec4.hpp
+../mat2x2.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/mat2x2.hpp
+../mat2x3.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/mat2x3.hpp
+../mat2x4.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/mat2x4.hpp
+../mat3x2.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/mat3x2.hpp
+../mat3x3.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/mat3x3.hpp
+../mat3x4.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/mat3x4.hpp
+../mat4x2.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/mat4x2.hpp
+../mat4x3.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/mat4x3.hpp
+../mat4x4.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/mat4x4.hpp
+cstring
+-
+type_ptr.inl
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/gtc/type_ptr.inl
+
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/gtc/type_ptr.inl
+cstring
+-
 
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/mat2x2.hpp
 detail/type_mat2x2.hpp
@@ -610,9 +900,35 @@ D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/vec4.hp
 detail/type_vec4.hpp
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/detail/type_vec4.hpp
 
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/Loaders/ObjectLoader.h
+glm.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/Loaders/glm.hpp
+vector
+-
+
 D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/Loaders/ShaderLoader.h
 glew.h
 -
 GLFW/glfw3.h
 -
+
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/main.cpp
+iostream
+-
+glew.h
+-
+GLFW/glfw3.h
+-
+GLM/glm/matrix.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/matrix.hpp
+GLM/glm/gtc/matrix_transform.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/gtc/matrix_transform.hpp
+GLM/glm/gtc/type_ptr.hpp
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/GLM/glm/gtc/type_ptr.hpp
+Loaders/ShaderLoader.h
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/Loaders/ShaderLoader.h
+Loaders/ObjectLoader.h
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/Loaders/ObjectLoader.h
+Controls/KeyboardControls.h
+D:/Computer Science Assignments/COMP 371 Assignments/COMP_371_A2/Controls/KeyboardControls.h
 
