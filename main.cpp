@@ -96,6 +96,66 @@ void keyboard_callback(GLFWwindow* window, int key, int scancode, int action, in
         glfwSetWindowShouldClose(window, true);
     }
 
+    //here we define what occurs if specific keys are pressed
+    //the functions are defined in the keyboard controls file, we are simply calling them based on
+    //which key is pressed
+    if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+        key_press_w(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+        key_press_s(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+        key_press_a(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+        key_press_d(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_O) == GLFW_PRESS)
+        key_press_o(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_P) == GLFW_PRESS)
+        key_press_p(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
+        key_press_left_arrow(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
+        key_press_right_arrow(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
+        key_press_up_arrow(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
+        key_press_down_arrow(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_B) == GLFW_PRESS)
+        key_press_b(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_N) == GLFW_PRESS)
+        key_press_n(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
+        key_press_e(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS)
+        key_press_j(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_L) == GLFW_PRESS)
+        key_press_l(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS)
+        key_press_i(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS)
+        key_press_k(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_PAGE_UP) == GLFW_PRESS)
+        key_press_pg_up(window, View, Projection, Model, programID);
+
+    if(glfwGetKey(window, GLFW_KEY_PAGE_DOWN) == GLFW_PRESS)
+        key_press_pg_down(window, View, Projection, Model, programID);
+
     //controls what occurs when the '1' key is pressed
     if(glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS)
         key_press_1(programID);
@@ -182,7 +242,7 @@ int main()
     std::vector<glm::vec3> vertices, normals;
     std::vector<glm::vec2> uvs;
     //we try to load the object file and if we fail, then we simply exit the program since we won't be able to draw anything
-    if(!LoadOBJ("../ObjectFiles/cat.obj", vertices, normals, uvs))
+    if(!LoadOBJ("../ObjectFiles/heracles.obj", vertices, normals, uvs))
         return -1;
 
     //We will try to create a cube by using a vertex array object
@@ -274,66 +334,6 @@ int main()
         //check if there was input
         //this includes clicking the close button on the window
         glfwPollEvents();
-
-        //here we define what occurs if specific keys are pressed
-        //the functions are defined in the keyboard controls file, we are simply calling them based on
-        //which key is pressed
-        if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-            key_press_w(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-            key_press_s(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-            key_press_a(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-            key_press_d(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_O) == GLFW_PRESS)
-            key_press_o(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_P) == GLFW_PRESS)
-            key_press_p(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
-            key_press_left_arrow(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
-            key_press_right_arrow(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
-            key_press_up_arrow(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
-            key_press_down_arrow(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_B) == GLFW_PRESS)
-            key_press_b(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_N) == GLFW_PRESS)
-            key_press_n(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
-            key_press_e(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS)
-            key_press_j(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_L) == GLFW_PRESS)
-            key_press_l(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS)
-            key_press_i(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS)
-            key_press_k(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_PAGE_UP) == GLFW_PRESS)
-            key_press_pg_up(window, View, Projection, Model, programID);
-
-        if(glfwGetKey(window, GLFW_KEY_PAGE_DOWN) == GLFW_PRESS)
-            key_press_pg_down(window, View, Projection, Model, programID);
 
         //before dealing with the mouse input, we need to get the current position of the mouse and compare it to
         //the old. Since we don't care about x, we can just pass 0.
